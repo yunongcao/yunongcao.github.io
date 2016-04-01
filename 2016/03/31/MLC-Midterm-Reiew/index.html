@@ -16,7 +16,9 @@
     
     
 
-    <meta name="description" content="BayesRidgepros:
+    <meta name="description" content="BayesSmaller prior variance, bigger influence on posterior.
+Ridge (Prior distribution = Normal)
+pros:
 
 A better compromise between bias and variance
 
@@ -24,18 +26,14 @@ cons:
 
 All predictors are kept in the model
 
-Lassopros:
-
-Sparsity achieved
-
-cons: 
-
-Not necessarily yield good results in presence of hi">
+Lasso">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MLC Midterm Reiew 1 | Dexter Cao">
 <meta property="og:url" content="http://yunongcao.github.io/2016/03/31/MLC-Midterm-Reiew/index.html">
 <meta property="og:site_name" content="Dexter Cao">
-<meta property="og:description" content="BayesRidgepros:
+<meta property="og:description" content="BayesSmaller prior variance, bigger influence on posterior.
+Ridge (Prior distribution = Normal)
+pros:
 
 A better compromise between bias and variance
 
@@ -43,17 +41,13 @@ cons:
 
 All predictors are kept in the model
 
-Lassopros:
-
-Sparsity achieved
-
-cons: 
-
-Not necessarily yield good results in presence of hi">
-<meta property="og:updated_time" content="2016-04-01T00:00:26.000Z">
+Lasso">
+<meta property="og:updated_time" content="2016-04-01T00:04:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MLC Midterm Reiew 1 | Dexter Cao">
-<meta name="twitter:description" content="BayesRidgepros:
+<meta name="twitter:description" content="BayesSmaller prior variance, bigger influence on posterior.
+Ridge (Prior distribution = Normal)
+pros:
 
 A better compromise between bias and variance
 
@@ -61,13 +55,7 @@ cons:
 
 All predictors are kept in the model
 
-Lassopros:
-
-Sparsity achieved
-
-cons: 
-
-Not necessarily yield good results in presence of hi">
+Lasso">
     
     
     
@@ -261,7 +249,9 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h3 id="Bayes"><a href="#Bayes" class="headerlink" title="Bayes"></a>Bayes</h3><p><strong>Ridge</strong><br>pros:</p>
+    <h3 id="Bayes"><a href="#Bayes" class="headerlink" title="Bayes"></a>Bayes</h3><p>Smaller prior variance, bigger influence on posterior.</p>
+<p><strong>Ridge</strong> (Prior distribution = Normal)</p>
+<p>pros:</p>
 <ul>
 <li>A better compromise between bias and variance</li>
 </ul>
@@ -269,7 +259,8 @@ classes that you can use:
 <ul>
 <li>All predictors are kept in the model</li>
 </ul>
-<p><strong>Lasso</strong><br>pros:</p>
+<p><strong>Lasso</strong> (Prior distribution = Laplace)</p>
+<p>pros:</p>
 <ul>
 <li>Sparsity achieved</li>
 </ul>
@@ -280,7 +271,7 @@ classes that you can use:
 <li>Tends to select only one variable among a group of predictors with high pairwise correlations</li>
 </ul>
 <h3 id="Bias-Variance-Trade-Off"><a href="#Bias-Variance-Trade-Off" class="headerlink" title="Bias-Variance Trade Off:"></a>Bias-Variance Trade Off:</h3><p>More complex model able to better learn from the training sample (lower bias) have higher variance, which leads to overfitting and high error for predicting the future values of the output variable.</p>
-<p><strong>Solution: Validation</strong><br>if the model depends on the certain parameters (like  α,λ for Lasso/Ridge) which are not supposed to be fit during the training phase, a separate validation sample could be used for the selection of model parameters (we pick up those which optimize model performance over the validation set). </p>
+<p><strong>Solution: Validation</strong><br>if the model depends on the certain parameters (like  α, λ for Lasso/Ridge) which are not supposed to be fit during the training phase, a separate validation sample could be used for the selection of model parameters (we pick up those which optimize model performance over the validation set). </p>
 <p><strong>Solution: Cross-validation</strong><br>Often the available dataset is small enough, so splitting into even smaller traning, validation and test sets could have negative impact on the model training leading to noisy and unreliable models. In such cases cross-validation is often applied, performing not one but several random splits of the sample with further averaging of the model performance scores.</p>
 <p><strong>Choice of  λ  or  α in Model validation</strong><br>Small values of  λ  or high values of  α  lead to the result close to OLS (identical to it is  λ=0  or  α=+∞)</p>
 <h3 id="PCA"><a href="#PCA" class="headerlink" title="PCA:"></a>PCA:</h3><ol>
