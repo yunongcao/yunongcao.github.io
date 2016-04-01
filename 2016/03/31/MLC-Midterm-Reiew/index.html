@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      MLC Midterm Reiew 1 | Dexter Cao 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Dexter Cao">
+    
+    
+
+    <meta name="description" content="BayesRidgepros:
+
+A better compromise between bias and variance
+
+cons:
+
+All predictors are kept in the model
+
+Lassopros:
+
+Sparsity achieved
+
+cons: 
+
+Not necessarily yield good results in presence of hi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MLC Midterm Reiew 1 | Dexter Cao">
+<meta property="og:url" content="http://yunongcao.github.io/2016/03/31/MLC-Midterm-Reiew/index.html">
+<meta property="og:site_name" content="Dexter Cao">
+<meta property="og:description" content="BayesRidgepros:
+
+A better compromise between bias and variance
+
+cons:
+
+All predictors are kept in the model
+
+Lassopros:
+
+Sparsity achieved
+
+cons: 
+
+Not necessarily yield good results in presence of hi">
+<meta property="og:updated_time" content="2016-04-01T00:00:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MLC Midterm Reiew 1 | Dexter Cao">
+<meta name="twitter:description" content="BayesRidgepros:
+
+A better compromise between bias and variance
+
+cons:
+
+All predictors are kept in the model
+
+Lassopros:
+
+Sparsity achieved
+
+cons: 
+
+Not necessarily yield good results in presence of hi">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Dexter Cao</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          A Blog Project
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">About</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">Archive</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/yunongcao" title="Huno on GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+    <!--
+    
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-weibo'></i>
+          <span class="label">Weibo</span>
+        </a>
+      </li>
+
+    -->
+
+
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">MLC Midterm Reiew 1</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-03-31" class="post-meta__date date">2016-03-31</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Machine-Learning/">Machine Learning</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="Bayes"><a href="#Bayes" class="headerlink" title="Bayes"></a>Bayes</h3><p><strong>Ridge</strong><br>pros:</p>
+<ul>
+<li>A better compromise between bias and variance</li>
+</ul>
+<p>cons:</p>
+<ul>
+<li>All predictors are kept in the model</li>
+</ul>
+<p><strong>Lasso</strong><br>pros:</p>
+<ul>
+<li>Sparsity achieved</li>
+</ul>
+<p>cons: </p>
+<ul>
+<li>Not necessarily yield good results in presence of high collinearity</li>
+<li>Not uniquely determined when the number of variables is greater than the number of subjects</li>
+<li>Tends to select only one variable among a group of predictors with high pairwise correlations</li>
+</ul>
+<h3 id="Bias-Variance-Trade-Off"><a href="#Bias-Variance-Trade-Off" class="headerlink" title="Bias-Variance Trade Off:"></a>Bias-Variance Trade Off:</h3><p>More complex model able to better learn from the training sample (lower bias) have higher variance, which leads to overfitting and high error for predicting the future values of the output variable.</p>
+<p><strong>Solution: Validation</strong><br>if the model depends on the certain parameters (like  α,λ for Lasso/Ridge) which are not supposed to be fit during the training phase, a separate validation sample could be used for the selection of model parameters (we pick up those which optimize model performance over the validation set). </p>
+<p><strong>Solution: Cross-validation</strong><br>Often the available dataset is small enough, so splitting into even smaller traning, validation and test sets could have negative impact on the model training leading to noisy and unreliable models. In such cases cross-validation is often applied, performing not one but several random splits of the sample with further averaging of the model performance scores.</p>
+<p><strong>Choice of  λ  or  α in Model validation</strong><br>Small values of  λ  or high values of  α  lead to the result close to OLS (identical to it is  λ=0  or  α=+∞)</p>
+<h3 id="PCA"><a href="#PCA" class="headerlink" title="PCA:"></a>PCA:</h3><ol>
+<li>Normalize</li>
+<li>Construct variance Matrix</li>
+<li>Calculate Eigenvalue </li>
+<li>Sort eigenvalue and find eigenvector</li>
+</ol>
+<p><strong>Covariance Matrix</strong></p>
+<ul>
+<li>Covariance is invariant under translations<br>Rotations won’t change the eigenvalues of the data covariance matrix (although the eigenvectors will be rotated).  </li>
+<li>Arbitrary scaling of the data will scale eigenvalues of the data covariance matrix by arbitrary amounts (and thus change e.g. the leading principal component).</li>
+</ul>
+<p><strong>Use idea of:</strong></p>
+<ol>
+<li>Maximum variance formulation  </li>
+<li>Minimum error formulation  </li>
+</ol>
+<p><strong>Kernel PCA</strong><br>Deal with non-linearity</p>
+<p><strong>Fisher’s linear discriminant</strong><br>Also takes the within-class variance into account</p>
+<h3 id="Neural-Network"><a href="#Neural-Network" class="headerlink" title="Neural Network"></a>Neural Network</h3><p><strong>Autoencoder</strong><br>假设其输出与输入是相同的，然后训练调整其参数，得到每一层中的权重。自然地，我们就得到了输入I的几种不同表示（每一层代表一种表示），这些表示就是特征。<br>To learn a representation (encoding) for a set of data<br>for the purpose of dimensionality reduction<br>[Blog for Notes in Chinese] (<a href="http://blog.sina.com.cn/s/blog_6a1b8c6b0101h9ho.html#91" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_6a1b8c6b0101h9ho.html#91</a>)  </p>
+<p><strong>NN Regularzation</strong></p>
+<ol>
+<li>cross-fold validation</li>
+<li>L2</li>
+</ol>
+<p>The regularization coefficient  λ , with  λ&gt;0 , controls how much the neural network is regularized. If λ is very large, the parameters of the neural network will be encouraged to be as small as possible.</p>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
