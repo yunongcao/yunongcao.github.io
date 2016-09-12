@@ -7,7 +7,7 @@
     
 
     <title>
-      NLP on Yelp | Yunong Cao 
+      Evaluate the Sentiment Intensity of Words Used on Yelp’s Review | Yunong Cao 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,12 +16,12 @@
     
     
 
-    <meta name="description" content="Characterize Restaurant Types via Sentiment Analysis on Yelp’s Customer Review1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which prov">
+    <meta name="description" content="1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which provides us with 566,000 basic business information (e.g., hours, address, ambienc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NLP on Yelp | Yunong Cao">
+<meta property="og:title" content="Evaluate the Sentiment Intensity of Words Used on Yelp’s Review | Yunong Cao">
 <meta property="og:url" content="http://yunongcao.github.io/2016/09/12/NLP-on-Yelp/index.html">
 <meta property="og:site_name" content="Yunong Cao">
-<meta property="og:description" content="Characterize Restaurant Types via Sentiment Analysis on Yelp’s Customer Review1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which prov">
+<meta property="og:description" content="1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which provides us with 566,000 basic business information (e.g., hours, address, ambienc">
 <meta property="og:image" content="http://yunongcao.github.io/img/pegasos_formula.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/pegasos_explain.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/error_curve.png">
@@ -29,10 +29,10 @@
 <meta property="og:image" content="http://yunongcao.github.io/img/pos5.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/top5pos_words.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/top5pos_words.png">
-<meta property="og:updated_time" content="2016-09-12T12:44:33.000Z">
+<meta property="og:updated_time" content="2016-09-12T12:48:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NLP on Yelp | Yunong Cao">
-<meta name="twitter:description" content="Characterize Restaurant Types via Sentiment Analysis on Yelp’s Customer Review1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which prov">
+<meta name="twitter:title" content="Evaluate the Sentiment Intensity of Words Used on Yelp’s Review | Yunong Cao">
+<meta name="twitter:description" content="1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which provides us with 566,000 basic business information (e.g., hours, address, ambienc">
 <meta name="twitter:image" content="http://yunongcao.github.io/img/pegasos_formula.png">
     
     
@@ -196,7 +196,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">NLP on Yelp</h1>
+    <h1 class="post-title">Evaluate the Sentiment Intensity of Words Used on Yelp’s Review</h1>
 
     
 
@@ -210,7 +210,7 @@ classes that you can use:
           
              &#8226; 标签:
             <font class="tags">
-              <a class="tags-link" href="/tags/Machine-Learning-Data-Mining/">Machine Learning, Data Mining</a>
+              <a class="tags-link" href="/tags/Machine-Learning/">Machine Learning</a>
             </font>
           
 
@@ -222,7 +222,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h2 id="Characterize-Restaurant-Types-via-Sentiment-Analysis-on-Yelp’s-Customer-Review"><a href="#Characterize-Restaurant-Types-via-Sentiment-Analysis-on-Yelp’s-Customer-Review" class="headerlink" title="Characterize Restaurant Types via Sentiment Analysis on Yelp’s Customer Review"></a>Characterize Restaurant Types via Sentiment Analysis on Yelp’s Customer Review</h2><h3 id="1-Description-of-Data"><a href="#1-Description-of-Data" class="headerlink" title="1. Description of Data"></a>1. Description of Data</h3><p>The dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which provides us with 566,000 basic business information (e.g., hours, address, ambience), 2.2 million customer reviews as well as 519,000 tips by 552,000 users. The total size of data is about 2.39GB. For this project, we used customer reviews and business attributes data. These two datasets are both in json format. Attributes in review data include business id, full address, price range, business categories and etc, while attributes in review data include review content, rating, business id and etc. The attributes we use are business id, business categories, review content and rating. Specifically, review content is the corpus for our analysis; rating is our identifier for discriminate positive or negative sentiment; business id serves as the key for data munging and the business categories serve as the key for grouping. The meaning and data type of these<br>attributes are shown in Table 1 below:</p>
+    <h3 id="1-Description-of-Data"><a href="#1-Description-of-Data" class="headerlink" title="1. Description of Data"></a>1. Description of Data</h3><p>The dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which provides us with 566,000 basic business information (e.g., hours, address, ambience), 2.2 million customer reviews as well as 519,000 tips by 552,000 users. The total size of data is about 2.39GB. For this project, we used customer reviews and business attributes data. These two datasets are both in json format. Attributes in review data include business id, full address, price range, business categories and etc, while attributes in review data include review content, rating, business id and etc. The attributes we use are business id, business categories, review content and rating. Specifically, review content is the corpus for our analysis; rating is our identifier for discriminate positive or negative sentiment; business id serves as the key for data munging and the business categories serve as the key for grouping. The meaning and data type of these<br>attributes are shown in Table 1 below:</p>
 <table>
 <thead>
 <tr>
