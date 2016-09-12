@@ -27,9 +27,9 @@
 <meta property="og:image" content="http://yunongcao.github.io/img/error_curve.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/neg5.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/pos5.png">
+<meta property="og:image" content="http://yunongcao.github.io/img/top5neg_words.png">
 <meta property="og:image" content="http://yunongcao.github.io/img/top5pos_words.png">
-<meta property="og:image" content="http://yunongcao.github.io/img/top5pos_words.png">
-<meta property="og:updated_time" content="2016-09-12T12:57:22.000Z">
+<meta property="og:updated_time" content="2016-09-12T13:05:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Evaluate the Sentiment Intensity of Words Used on Yelp’s Review | Yunong Cao">
 <meta name="twitter:description" content="1. Description of DataThe dataset was obtained from the online Yelp Dataset Challenge, consisting of five parts which provides us with 566,000 basic business information (e.g., hours, address, ambienc">
@@ -279,9 +279,9 @@ classes that you can use:
 <h3 id="5-Conclusion-and-Recommendation"><a href="#5-Conclusion-and-Recommendation" class="headerlink" title="5. Conclusion and Recommendation"></a>5. Conclusion and Recommendation</h3><p>In this project, we have developed an efficient SVM model for discriminating positive or negative sentiment on Yelp’s reviews with an accuracy of 88.906% on the test set. In fact, our model can also be used to automatically generate ratings for tips (short reviews that are not accompanied with ratings) on Yelp by assigning weights to tips using the sentiment score of words and thus giving more reasonable overall ratings for restaurants.</p>
 <p>Based on our analysis, we found out that for most restaurant types, friendly ranks first before all the other positive comments, indicating that service might weight more than taste when people are judging a restaurant. In addition, different characteristics are shown for different restaurant categories. Japanese and Vietnamese food received positive feedback because of freshness, while Korean and Thai restaurants received positive reviews for their spicy food. It could also be noticed that most Asian restaurants are considered to be salty including Chinese, Japanese, Southern, Thai and Vietnamese. While French, Italian, Japanese and Korean food are regarded to be overpriced, which might have something to do with their relatively better environment and service. On the contrary, servers in Chinese and Vietnamese restaurants are mentioned to be rude.</p>
 <p>Although the performance of our model is acceptable, there are still a lot of spaces for improvement. One of the suggestions for future work is to try boosting or Naïve Bayes algorithms or applying the neural network for classifications and to check whether it outperforms our algorithm. For the feature selection part, the tf-idf measure may also be considered instead a simple count of each word. Also, considering the large size of data, we suggest performing the work on a big data framework such as Spark to increase the computing efficiency.</p>
-<p><img src="/img/top5pos_words.png" alt="f6" title="Top Positive Words for Different Types of Restaurants"></p>
+<p><img src="/img/top5neg_words.png" alt="f6" title="Top Negative Words for Different Types of Restaurants"></p>
 <p><strong>Appendix 1. Top Negative Words for Different Types of Restaurants</strong> </p>
-<p><img src="/img/top5pos_words.png" alt="f6" title="Top Positive Words for Different Types of Restaurants"></p>
+<p><img src="/img/top5pos_words.png" alt="f7" title="Top Positive Words for Different Types of Restaurants"></p>
 <p><strong>Appendix 2. Top Positive Words for Different Types of Restaurants</strong> </p>
 
   </section>
