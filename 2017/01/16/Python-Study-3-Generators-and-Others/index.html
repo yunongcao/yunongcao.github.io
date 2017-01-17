@@ -7,7 +7,7 @@
     
 
     <title>
-      Tag: Python 
+      Python Study 3 - Generators and Others | Yunong Cao 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,15 +16,16 @@
     
     
 
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tag: Python">
-<meta property="og:url" content="http://yunongcao.github.io/tags/Python/index.html">
+    <meta name="description" content="range vs np.arange vs xrangerange creates a list, so if you do range(1, 10000000) it creates a list in memory with 10000000 elements.np.arange pretty much like a range function, but it  returns an num">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Study 3 - Generators and Others | Yunong Cao">
+<meta property="og:url" content="http://yunongcao.github.io/2017/01/16/Python-Study-3-Generators-and-Others/index.html">
 <meta property="og:site_name" content="Yunong Cao">
-<meta property="og:description">
+<meta property="og:description" content="range vs np.arange vs xrangerange creates a list, so if you do range(1, 10000000) it creates a list in memory with 10000000 elements.np.arange pretty much like a range function, but it  returns an num">
+<meta property="og:updated_time" content="2017-01-17T05:37:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tag: Python">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Python Study 3 - Generators and Others | Yunong Cao">
+<meta name="twitter:description" content="range vs np.arange vs xrangerange creates a list, so if you do range(1, 10000000) it creates a list in memory with 10000000 elements.np.arange pretty much like a range function, but it  returns an num">
     
     
     
@@ -183,83 +184,47 @@ classes that you can use:
         <div class="content-wrapper__inner entry">
             
 
+<article class="post-container post-container--single">
 
-  <h1 class="archive-title">Tag: Python</h1>
-  <hr class="post-list__divider" />
-
-
-<div class="main-post-list">
-    <ol class="post-list">
+  <header class="post-header">
     
-    
-    <li>
+    <h1 class="post-title">Python Study 3 - Generators and Others</h1>
 
-      <h2 class="post-list__post-title post-title">
-        <a href="/2017/01/16/Python-Study-3-Generators-and-Others/" title="link to Python Study 3 - Generators and Others">Python Study 3 - Generators and Others</a>
-      </h2>
-
-      <div class="post-list__meta">
-
-        <time datetime="2017-01-16" class="post-list__meta--date date">2017-01-16</time> 
-      </div>
-
-      <div class="excerpt">
-        
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li>
-
-      <h2 class="post-list__post-title post-title">
-        <a href="/2017/01/16/Python-Study-2-Garbage-Collection/" title="link to Python Study 2 - GIL">Python Study 2 - GIL</a>
-      </h2>
-
-      <div class="post-list__meta">
-
-        <time datetime="2017-01-16" class="post-list__meta--date date">2017-01-16</time> 
-      </div>
-
-      <div class="excerpt">
-        
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li>
-
-      <h2 class="post-list__post-title post-title">
-        <a href="/2017/01/16/Idioms-and-Definitions-in-Python/" title="link to Python Study 1 - * and **">Python Study 1 - * and **</a>
-      </h2>
-
-      <div class="post-list__meta">
-
-        <time datetime="2017-01-16" class="post-list__meta--date date">2017-01-16</time> 
-      </div>
-
-      <div class="excerpt">
-        
-      </div>
-
-      <hr class="post-list__divider" />
-    </li>
-    
-  </ol>
-
-  <hr class="post-list__divider " />
-
-<nav class="pagination" role="navigation">
     
 
-    <span class="pagination__page-number"> 1 / 1</span>
+    <div class="post-meta">
+      <time datetime="2017-01-16" class="post-meta__date date">2017-01-16</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Python/">Python</a>
+            </font>
+          
+
+      </span>
+    </div>
     
     
-</nav>
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="range-vs-np-arange-vs-xrange"><a href="#range-vs-np-arange-vs-xrange" class="headerlink" title="range vs np.arange vs xrange"></a><code>range</code> vs <code>np.arange</code> vs <code>xrange</code></h4><p><code>range</code> creates a list, so if you do <code>range(1, 10000000)</code> it creates a list in memory with 10000000 elements.<br><code>np.arange</code> pretty much like a range function, but it  returns an numpy array instead of a list.<br><code>xrange</code> is a sequence object is a that evaluates lazily. (much less memory is used).  </p>
+<p><strong>Efficiency</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">%timeit <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000000</span>): <span class="keyword">pass</span></span><br><span class="line">[out] <span class="number">10</span> loops, best of <span class="number">3</span>: <span class="number">63.6</span> ms per loop</span><br><span class="line"></span><br><span class="line">%timeit <span class="keyword">for</span> i <span class="keyword">in</span> np.arange(<span class="number">1000000</span>): <span class="keyword">pass</span></span><br><span class="line">[out] <span class="number">10</span> loops, best of <span class="number">3</span>: <span class="number">158</span> ms per loop</span><br><span class="line"></span><br><span class="line">%timeit <span class="keyword">for</span> i <span class="keyword">in</span> xrange(<span class="number">1000000</span>): <span class="keyword">pass</span></span><br><span class="line">[out] <span class="number">10</span> loops, best of <span class="number">3</span>: <span class="number">23.4</span> ms per loop</span><br></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+</article>
 
 
-</div>
             <footer class="footer">
 
     <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
@@ -287,6 +252,18 @@ classes that you can use:
 
 
     
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
     
     
     <!--kill ie6 -->
