@@ -7,7 +7,7 @@
     
 
     <title>
-      Python Study 2 - Garbage Collection | Yunong Cao 
+      Python Study 2 - GIL | Yunong Cao 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -18,13 +18,13 @@
 
     <meta name="description" content="GILGlobal interpreter lock (GIL) is a mechanism used in interpreters to ensures that only one thread runs in the interpreter at once. On multi-core systems, it means that multiple threads can’t effect">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python Study 2 - Garbage Collection | Yunong Cao">
+<meta property="og:title" content="Python Study 2 - GIL | Yunong Cao">
 <meta property="og:url" content="http://yunongcao.github.io/2017/01/16/Python-Study-2-Garbage-Collection/index.html">
 <meta property="og:site_name" content="Yunong Cao">
 <meta property="og:description" content="GILGlobal interpreter lock (GIL) is a mechanism used in interpreters to ensures that only one thread runs in the interpreter at once. On multi-core systems, it means that multiple threads can’t effect">
-<meta property="og:updated_time" content="2017-01-17T03:44:30.000Z">
+<meta property="og:updated_time" content="2017-01-17T03:46:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python Study 2 - Garbage Collection | Yunong Cao">
+<meta name="twitter:title" content="Python Study 2 - GIL | Yunong Cao">
 <meta name="twitter:description" content="GILGlobal interpreter lock (GIL) is a mechanism used in interpreters to ensures that only one thread runs in the interpreter at once. On multi-core systems, it means that multiple threads can’t effect">
     
     
@@ -188,7 +188,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">Python Study 2 - Garbage Collection</h1>
+    <h1 class="post-title">Python Study 2 - GIL</h1>
 
     
 
@@ -214,17 +214,17 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h3 id="GIL"><a href="#GIL" class="headerlink" title="GIL"></a><strong>GIL</strong></h3><p>Global interpreter lock (GIL) is a mechanism used in interpreters to ensures that only one thread runs in the interpreter at once. On multi-core systems, it means that multiple threads can’t effectively make use of multiple cores.</p>
+    <p><strong>GIL</strong><br>Global interpreter lock (GIL) is a mechanism used in interpreters to ensures that only one thread runs in the interpreter at once. On multi-core systems, it means that multiple threads can’t effectively make use of multiple cores.</p>
 <p>Applications running on implementations with a GIL can be designed to use separate processes to achieve full parallelism, as each process has its own interpreter and in turn has its own GIL. Otherwise, the GIL can be a significant barrier to parallelism.</p>
-<p>####<strong>Reasons for employing GIL</strong></p>
+<p><strong>Reasons for employing GIL</strong></p>
 <ul>
 <li>increased speed of single-threaded programs (no necessity to acquire or release locks on all data structures separately)</li>
 <li>easy integration of C libraries that usually are not thread-safe</li>
 <li>ease of implementation (having a single GIL is much simpler to implement than a lock-free interpreter or one using fine-grained locks)  </li>
 </ul>
-<p>####<strong>Drawbacks</strong><br>Use of a global interpreter lock in a language effectively limits the amount of parallelism reachable through concurrency of a single interpreter process with multiple threads. If the process is almost purely made up of interpreted code and does not make calls outside of the interpreter for long periods of time (which can release the lock on the GIL on that thread while it processes), there is likely to be very little increase in speed when running the process on a multiprocessor machine. Due to signaling with a CPU-bound thread, it can cause a significant slowdown, even on single processors.</p>
-<p>####<strong>Note</strong><br>GIL is only really an issue for CPython. In fact, as a Python developer, you don’t generally come across the GIL unless you’re writing a C extension. C extension writers need to release the GIL when their extensions do blocking I/O, so that other threads in the Python process get a chance to run.</p>
-<p>####<strong>Fix</strong></p>
+<p><strong>Drawbacks</strong><br>Use of a global interpreter lock in a language effectively limits the amount of parallelism reachable through concurrency of a single interpreter process with multiple threads. If the process is almost purely made up of interpreted code and does not make calls outside of the interpreter for long periods of time (which can release the lock on the GIL on that thread while it processes), there is likely to be very little increase in speed when running the process on a multiprocessor machine. Due to signaling with a CPU-bound thread, it can cause a significant slowdown, even on single processors.</p>
+<p><strong>Note</strong><br>GIL is only really an issue for CPython. In fact, as a Python developer, you don’t generally come across the GIL unless you’re writing a C extension. C extension writers need to release the GIL when their extensions do blocking I/O, so that other threads in the Python process get a chance to run.</p>
+<p><strong>Fix</strong></p>
 <ul>
 <li>Other interpreter such as Jython and IronPython</li>
 <li>Use multiprocessing</li>
